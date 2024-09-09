@@ -7,14 +7,14 @@ module palette (
   reg [5:0] palette[7:0];
 
   initial begin
-    palette[0] = 6'b001011;  // cyan
-    palette[1] = 6'b110110;  // pink
-    palette[2] = 6'b101101;  // green
-    palette[3] = 6'b111000;  // orange
-    palette[4] = 6'b110011;  // purple
-    palette[5] = 6'b111100;  // yellow
-    palette[6] = 6'b110001;  // red
-    palette[7] = 6'b111111;  // white
+    palette[0] = 6'b101011;
+    palette[1] = 6'b010111;
+    palette[2] = 6'b000111;
+    palette[3] = 6'b011011;
+    palette[4] = 6'b001011;
+    palette[5] = 6'b001111;
+    palette[6] = 6'b101111;
+    palette[7] = 6'b111111;
   end
 
   assign rrggbb = palette[color_index];

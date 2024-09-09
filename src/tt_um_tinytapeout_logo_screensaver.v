@@ -66,7 +66,6 @@ module tt_um_tinytapeout_logo_screensaver (
 
   wire pixel_value;
   reg [2:0] color_index;
-  wire [5:0] pallete_color;
   wire [5:0] color;
 
   wire [9:0] x = pix_x - logo_left;
@@ -79,13 +78,13 @@ module tt_um_tinytapeout_logo_screensaver (
       .pixel(pixel_value)
   );
 
-  palette palette_inst (
-      .color_index(color_index),
-      .rrggbb(pallete_color)
-  );
+  wire [2:0] solid_color_index = {color_index[0], color_index[1], color_index[2]};
+  wire [2:0] gradient_color_index = {y[4:2] - x[4:2] + logo_left[4:2]};
 
-  wire [5:0] gradient_color = {1'b1, y[6:2] - x[6:2] + logo_left[6:2]};
-  assign color = cfg_solid_color ? pallete_color : gradient_color;
+  palette palette_inst (
+      .color_index(cfg_solid_color ? solid_color_index : gradient_color_index),
+      .rrggbb(color)
+  );
 
   // RGB output logic
   always @(posedge clk) begin

@@ -12,7 +12,7 @@ parameter DISPLAY_HEIGHT = 480;  // VGA display height
 
 `define COLOR_WHITE 3'd7
 
-module tt_um_tinytapeout_logo_screensaver (
+module tt_um_rebeccargb_tt09ball_screensaver (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path

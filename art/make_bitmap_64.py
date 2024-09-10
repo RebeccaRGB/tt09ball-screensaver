@@ -4,7 +4,7 @@
 from PIL import Image
 
 # Open the image
-img = Image.open("tt09ball2d.png")
+img = Image.open("tt09ball2e.png")
 
 # Convert the image to grayscale
 img = img.convert("L")

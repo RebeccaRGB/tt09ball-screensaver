@@ -45,7 +45,7 @@ module tt_um_rebeccargb_tt09ball_screensaver (
   assign uio_oe  = 0;
 
   // Suppress unused signals warning
-  wire _unused_ok = &{ena, ui_in[7:1], uio_in};
+  wire _unused = &{ena, ui_in[7:1], uio_in, 1'b0};
 
   reg [9:0] prev_y;
 

@@ -87,7 +87,7 @@ module tt_um_rebeccargb_tt09ball_screensaver (
   );
 
   // RGB output logic
-  always @(posedge clk) begin
+  always @(posedge clk, negedge rst_n) begin
     if (~rst_n) begin
       R <= 0;
       G <= 0;
@@ -105,7 +105,7 @@ module tt_um_rebeccargb_tt09ball_screensaver (
   end
 
   // Bouncing logic
-  always @(posedge clk) begin
+  always @(posedge clk, negedge rst_n) begin
     if (~rst_n) begin
       logo_left <= 200;
       logo_top <= 200;

@@ -37,6 +37,13 @@ jobs:
       - name: GL test
         uses: TinyTapeout/tt-gds-action/gl_test@tt10
 
+      - name: upload output
+        if: success() || failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gatelevel-test-output
+          path: test/output/*
+
   viewer:
     needs: gds
     runs-on: ubuntu-24.04

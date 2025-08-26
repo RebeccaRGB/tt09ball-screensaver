@@ -16,9 +16,16 @@ Displays THE STRONGEST bouncing logo on the screen, with animated color gradient
 ## How to test
 
 Connect to a VGA monitor. Set the following inputs to configure the design:
+
 - `tile` (ui_in[0]) to repeat the logo and tile it across the screen,
 - `solid_color` (ui_in[1]) to use a solid color instead of an animated gradient.
 
+If you have a Gamepad Pmod connected, you can also use the following controls:
+
+- Start button: start/pause bouncing
+- Left/right/up/down: change the bouncing direction (if bouncing) or move the logo around the screen (if paused)
+
 ## External hardware
 
-[TinyVGA PMOD](https://github.com/mole99/tiny-vga)
+- [Tiny VGA Pmod](https://github.com/mole99/tiny-vga)
+- Optional: [Gamepad Pmod](https://github.com/psychogenic/gamepad-pmod)

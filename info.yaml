@@ -19,6 +19,7 @@ project:
   source_files:
     - "screensaver.v"
     - "bitmap_rom.v"
+    - "gamepad_pmod.v"
     - "vga_sync_generator.v"
     - "palette.v"
 
@@ -30,9 +31,9 @@ pinout:
   ui[1]: "solid_color"
   ui[2]: ""
   ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
+  ui[4]: "gamepad_latch"
+  ui[5]: "gamepad_clk"
+  ui[6]: "gamepad_data"
   ui[7]: ""
 
   # Outputs
